@@ -49,7 +49,7 @@
 
 /* Store location */
 .visit{grid-template-columns:minmax(0,.85fr) minmax(0,1.3fr);gap:48px;align-items:start}
-.visit .visit-lead{margin:0 0 25px;line-height:1.9}
+.visit > *{min-width:0}.visit .visit-lead{margin:0 0 25px;line-height:1.9}
 .store-kicker{display:inline-flex;align-items:center;gap:7px;background:var(--sage);border-radius:30px;padding:5px 13px;font-size:12px;color:#667254;margin-top:4px}
 .visit .visit-card{padding:22px 25px}.visit-row{gap:14px}.visit-row strong{flex:1;min-width:0}.visit-row span{flex-shrink:0}
 .store-name{font-size:19px;margin:0 0 10px;line-height:1.6;font-weight:600}
@@ -62,7 +62,7 @@
 .store-map figcaption{padding:14px 22px;background:#fffdf8;border-top:1px solid #e0dfcf;font-size:11px;color:#7c8270;line-height:1.8}
 .map-location:hover .map-pin{fill:#c65f36}.map-location:focus-visible{outline:none}.map-location:focus-visible .pin-ring{stroke:#333a2e;stroke-width:4}
 @media(max-width:900px){.visit{gap:25px;grid-template-columns:1fr 1.15fr}.visit .visit-card{padding:18px}.store-actions{flex-wrap:wrap}.map-heading{padding:18px 18px 0}}
-@media(max-width:650px){.visit{grid-template-columns:1fr;gap:25px}.store-map{border-radius:16px}.map-heading strong{font-size:14px}.map-heading span{font-size:9px}.visit .visit-card{padding:22px}.store-map figcaption{padding:12px 18px}}
+@media(max-width:650px){.visit{grid-template-columns:minmax(0,1fr);gap:25px}.store-map{border-radius:16px}.map-heading strong{font-size:14px}.map-heading span{font-size:9px}.visit .visit-card{padding:22px}.store-map figcaption{padding:12px 18px}}
 
 </style>
 </head>
