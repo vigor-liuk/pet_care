@@ -118,9 +118,11 @@ export function Environment() {
         className="space-carousel"
         ref={rootRef}
         onKeyDown={onKeyDown}
-        onMouseEnter={() => setHovered(true)}
-        onMouseLeave={() => setHovered(false)}
-        onFocus={() => setFocused(true)}
+        onPointerEnter={(event) => {
+          if (event.pointerType === "mouse") setHovered(true);
+        }}
+        onPointerLeave={() => setHovered(false)}
+        onFocus={(event) => setFocused(event.target.matches(":focus-visible"))}
         onBlur={(event) => {
           if (!event.currentTarget.contains(event.relatedTarget))
             setFocused(false);
@@ -242,7 +244,11 @@ export function Environment() {
               className="space-pause"
               type="button"
               aria-label={playing ? "暂停自动轮播" : "开始自动轮播"}
-              onClick={() => setPlayOverride(!playing)}
+              onClick={() => {
+                setPlayOverride(!playing);
+                // An explicit play request takes priority over retained focus.
+                if (!playing) setFocused(false);
+              }}
             >
               {playing ? "Ⅱ 暂停轮播" : "▷ 播放轮播"}
             </button>

@@ -5,6 +5,7 @@ import { Promises } from "@/components/Promises";
 import { Services } from "@/components/Services";
 import { Care } from "@/components/Care";
 import { Environment } from "@/components/environment";
+import { Testimonials } from "@/components/Testimonials";
 import { Visit } from "@/components/Visit";
 import { Footer } from "@/components/Footer";
 
@@ -21,6 +22,7 @@ export default function Home() {
         <Services />
         <Care />
         <Environment />
+        <Testimonials />
         <Visit />
       </main>
       <Footer />
