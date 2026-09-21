@@ -5,6 +5,8 @@ import {
 } from "./copy-address";
 import { BookingButton } from "./booking";
 
+const storeMapUrl = `https://uri.amap.com/search?keyword=${encodeURIComponent("上海市闵行区江川路街道沧源路595号")}&city=310000&view=map&src=pawpal`;
+
 export function Visit() {
   return (
     <>
@@ -46,11 +48,11 @@ export function Visit() {
               <div className="store-actions">
                 <a
                   className="button"
-                  href="https://map.baidu.com/search/%E4%B8%8A%E6%B5%B7%E5%B8%82%E9%97%B5%E8%A1%8C%E5%8C%BA%E6%B1%9F%E5%B7%9D%E8%B7%AF%E8%A1%97%E9%81%93%E6%B2%A7%E6%BA%90%E8%B7%AF595%E5%8F%B7"
+                  href={storeMapUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  百度地图查看 <span aria-hidden="true">↗</span>
+                  高德地图查看 <span aria-hidden="true">↗</span>
                 </a>
                 <CopyAddressButton />
               </div>
@@ -68,10 +70,10 @@ export function Visit() {
             </div>
             <a
               className="illustrated-map-link"
-              href="https://map.baidu.com/search/%E4%B8%8A%E6%B5%B7%E5%B8%82%E9%97%B5%E8%A1%8C%E5%8C%BA%E6%B1%9F%E5%B7%9D%E8%B7%AF%E8%A1%97%E9%81%93%E6%B2%A7%E6%BA%90%E8%B7%AF595%E5%8F%B7"
+              href={storeMapUrl}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="在百度地图查看宠爱屋，沧源路595号"
+              aria-label="在高德地图查看宠爱屋，沧源路595号"
             >
               <img
                 className="illustrated-map-image"
@@ -84,7 +86,7 @@ export function Visit() {
               />
             </a>
             <figcaption>
-              AI 插画位置示意 · 非等比例地图。点击图片可在百度地图查看实际位置。
+              AI 插画位置示意 · 非等比例地图。点击图片可在高德地图查看实际位置。
             </figcaption>
           </figure>
         </section>

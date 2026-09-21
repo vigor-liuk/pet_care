@@ -28,7 +28,7 @@ test("static homepage loads without missing resources or hydration errors", asyn
   expect(errors).toEqual([]);
   await expect(page.locator(".illustrated-map-link")).toHaveAttribute(
     "href",
-    /https:\/\/map.baidu.com\/search\//,
+    /https:\/\/uri\.amap\.com\/search\?keyword=/,
   );
 });
 
